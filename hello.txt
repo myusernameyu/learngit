@@ -9,4 +9,6 @@ git status <file> 查看当前文件的状态, file 不填 表示 查看所有�
 
 git diff <file> 对比上个版本文件 查看差异, file 不填 表示 查看所有文件
 
+git log [--pretty=oneline] <file> 查看文件版本日志 file 不填 表示 查看所有日志 --pretty=oneline 可选, 一行显示
 
+水电费水电费水电费水电费水电费
