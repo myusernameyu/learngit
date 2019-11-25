@@ -1,1 +1,12 @@
-hello world
+添加文件到版本库  可多次添加  如果该文件修改了, 需要提交, 也是需要先add
+git add <file>
+
+提交文件到版本库  一次性提交
+git commit -m <message>
+
+
+git status <file> 查看当前文件的状态, file 不填 表示 查看所有文件
+
+git diff <file> 对比上个版本文件 查看差异, file 不填 表示 查看所有文件
+
+
