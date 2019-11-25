@@ -1,5 +1,9 @@
-添加文件到版本库  可多次添加  如果该文件修改了, 需要提交, 也是需要先add
+添加文件到版本库  可多次添加  如果该文件修改了, 需要提交, 也是需要先add 
 git add <file>
+git add 命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行git commit就可以一次性把暂存区的所有修改提交到分支。
+如果 文件已经执行了 add 操作, 然后又修改了, 需要再次执行 add操作 commit 时 才会提交
+	add 把第一次修改的内容放入了暂存区, 但是第二次修改 没有, commit只会提交 暂存区的内容, 所以第二次修改的内容没有被提交上去
+
 
 提交文件到版本库  一次性提交
 git commit -m <message>
@@ -11,4 +15,15 @@ git diff <file> 对比上个版本文件 查看差异, file 不填 表示 查看
 
 git log [--pretty=oneline] <file> 查看文件版本日志 file 不填 表示 查看所有日志 --pretty=oneline 可选, 一行显示
 
-水电费水电费水电费水电费水电费
+在Git中，用HEAD表示当前版本 上一个版本就是HEAD^，上上一个版本就是HEAD^^ HEAD~100表示上100个版本
+
+git reset --hard <版本号> 回退到哪个版本
+git reset HEAD file 把 暂存区 的修改撤销掉（unstage）， 重新放回工作区
+
+git reflog 查看历史git 命令
+
+git checkout -- file 可以丢弃工作区的修改内容 让这个文件回到最近一次git commit或git add时(暂存区)的状态
+	--很重要，没有--， 表示“切换到另一个分支”
+
+git rm [-f] <file> 从版本库中删除文件 -f 可选参数: 强制删除
+
